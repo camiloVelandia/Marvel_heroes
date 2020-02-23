@@ -3,12 +3,14 @@
   height: 100px;
   position: relative;
 }
-.header__title{
+.header__container--title{
   position: absolute;
-  color: $color_secundario;
-  width: inherit;
-  text-align: center;
-  font-size: 4em;
+  color: $color_claro;
+  background: $color-secundario;
+  top: 20%;
+  left: 40%;
+  padding: 5px;
+  border: 5px solid $color_claro;
 }
 .header__img{
   width: 100%;
