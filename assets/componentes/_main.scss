@@ -1,4 +1,7 @@
 .main{
   height: calc(100vh - 160px);
   background: red;
+  display: grid;
+  grid-template-rows: 15%  85%;
+  grid-template-areas: "search" "hero";
 }

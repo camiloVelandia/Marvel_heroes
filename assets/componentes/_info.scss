@@ -1,0 +1,20 @@
+.info{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.info__img {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  
+  & img{
+  width: 30%;
+  }
+}
+.info__details{
+  display: flex;
+  flex-direction: column;
+ justify-content: center;
+ padding-left: 2em;
+ color: $color-claro;
+}

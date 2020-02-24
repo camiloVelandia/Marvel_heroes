@@ -1,0 +1,27 @@
+.search{
+  grid-area: search;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search__text{
+  height: 2em;
+  width: 50%;
+  border: none;
+  border-radius: 5px;
+}
+.search__button{
+  height: 2em;
+  background-color: $color-variacion;
+  border: none;
+  width: 60px;
+  color: $color-claro;
+  outline: none;
+  cursor:pointer;
+  &:hover{
+    background-color: #a78e5f;
+  }
+  &:active{
+    transform: scale(.9);
+  }
+}
