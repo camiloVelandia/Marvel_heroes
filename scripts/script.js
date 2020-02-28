@@ -16,7 +16,7 @@ function renderInfo(name, description){
 const getConnection = () => {
   const ts = Date.now(),
   hash = md5(ts + privateKey + publicKey),
-  URL = `http://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+  URL = `https://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
   fetch(URL)
     .then(response => response.json())
     .then(data =>{
