@@ -1,6 +1,6 @@
 .info{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 4fr 5fr;
 }
 .info__img {
   display: flex;
@@ -9,10 +9,12 @@
   
   & img{
   width: 30%;
+  border: 10px solid $color-primario;
   }
 }
 .info__details{
   display: flex;
+  width: 50%;
   flex-direction: column;
  justify-content: center;
  padding-left: 2em;

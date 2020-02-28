@@ -1,6 +1,8 @@
 .main{
   height: calc(100vh - 160px);
-  background: red;
+  background-image: url("../assets/img/back3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   display: grid;
   grid-template-rows: 15%  85%;
   grid-template-areas: "search" "hero";
