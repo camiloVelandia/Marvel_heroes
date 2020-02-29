@@ -1,3 +1,4 @@
+const $search = document.getElementById("search")
 const $image = document.getElementById("image")
 const $name = document.getElementById("name")
 const $description = document.getElementById("description")
@@ -13,6 +14,8 @@ function renderInfo(name, description){
 }
 
 
+
+
 const getConnection = () => {
   const ts = Date.now(),
   hash = md5(ts + privateKey + publicKey),
@@ -22,15 +25,46 @@ const getConnection = () => {
     .then(data =>{
       let ruta_base = data.data.results[4]
       let ruta_image = ruta_base.thumbnail.path
-      //console.log (ruta)
-      console.log (ruta_base)
+      console.log (data.data.results)
       renderImage(`${ruta_image}/portrait_xlarge.jpg`)
-      renderInfo(ruta_base.name, ruta_base.description)
-    
+     renderInfo(ruta_base.name, ruta_base.description)
       })
+      
       
 }
 
+const searchHero = name => {
+  const ts = Date.now(),
+  hash = md5(ts + privateKey + publicKey),
+  hero = encodeURIComponent(name),
+  URL = `http://gateway.marvel.com/v1/public/characters?name=${hero}&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+  fetch(URL)
+    .then(response => response.json())
+    .then(data =>{
+      let ruta_base = data.data.results[0]
+      let ruta_image = ruta_base.thumbnail.path
+      renderImage(`${ruta_image}/portrait_xlarge.jpg`)
+      console.log(data.data.results)
+    })
+    //.catch(e => console.log(e));
 
+    
+};
+searchHero('black widow')
+
+
+search.addEventListener('keyup', e =>{
+ // debugger
+  if (e.KeyCode === 13) {
+    //debugger
+   searchHero(e.target.value.trim());
+   alert('personaje :'+e.target.value.trim());
+ }else {
+
+    //alert('no recive enter');
+
+ }
+
+});
 getConnection()
 
