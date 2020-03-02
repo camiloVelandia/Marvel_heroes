@@ -23,7 +23,7 @@ const searchHero = name => {
   const ts = Date.now(),
   hash = md5(ts + privateKey + publicKey),
   hero = encodeURIComponent(name),
-  URL = `http://gateway.marvel.com/v1/public/characters?name=${hero}&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+  URL = `https://gateway.marvel.com/v1/public/characters?name=${hero}&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
   fetch(URL)
     .then(response => response.json())
     .then(data =>{
