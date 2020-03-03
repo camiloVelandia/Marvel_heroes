@@ -15,13 +15,13 @@
 @media only screen and (max-width: 500px) and (min-width: 341px) {  
   .header__container--title{
     width: 40%;
-    left: 23%;
+    left: 27%;
     font-size: .7em;
   }
   
   .info__img {
     & img{
-    width: 50%;
+    width: 80%;
     border: 5px solid $color-primario;
     }
   }
