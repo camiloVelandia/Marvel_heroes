@@ -31,11 +31,9 @@ const searchHero = name => {
       let ruta_image = ruta_base.thumbnail.path
       renderImage(`${ruta_image}/portrait_xlarge.jpg`)
       renderInfo(ruta_base.name, ruta_base.description)
-      console.log(data.data.results)
     })
     .catch(e => {
-      console.log('no encontrado')
-      renderInfo("404","not found")
+      renderInfo("404","Hero not found :(")
       $image.style.display= "none";
     });
 
@@ -47,8 +45,6 @@ $form.addEventListener('submit', (event)=>{
   event.preventDefault()
   const formData = new FormData(event.currentTarget)
   //debugger
-  console.log(formData.get('hero-name'))
-  renderInfo(formData.get('hero-name'), "na")
   searchHero(formData.get('hero-name'))
 })
 
