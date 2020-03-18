@@ -10,3 +10,5 @@ I used technologies such as HTML, CSS, Sass and Javascript
 ## Demo
 you can see the demo [here](https://camilovelandia.github.io/Marvel_heroes/)
 
+## Preview
+![](/preview.jpg)
